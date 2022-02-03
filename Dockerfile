@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/rhscl/nodejs-12-rhel7:latest
+FROM registry.redhat.io/rhscl/nodejs-12-rhel7:latest
 ENV NODE_ENV=production
 WORKDIR /app
 USER 0
