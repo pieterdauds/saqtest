@@ -1,7 +1,12 @@
-const ronin = require('ronin-server')
-const mocks = require('ronin-mocks')
+const http = require('http');
+const port = process.env.PORT || 3000;
 
-const server = ronin.server()
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  const msg = 'Hello Node!\n'
+  res.end(msg);
+});
 
-server.use('/', mocks.server(server.Router(), false, true))
-server.start()
+server.listen(port, () => {
+  console.log(`Server running on http://localhost:${port}/`);
+});
