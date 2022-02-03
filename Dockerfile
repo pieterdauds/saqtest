@@ -1,4 +1,4 @@
-FROM rhscl/nodejs-12-rhel7
+FROM registry.redhat.io/rhscl/nodejs-12-rhel7
 
 # Add application sources to a directory that the assemble script expects them
 # and set permissions so that the container runs without root access
