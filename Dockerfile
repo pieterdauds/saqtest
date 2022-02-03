@@ -1,4 +1,4 @@
-FROM quay.io/generic/rhel7:latest
+FROM registry.access.redhat.com/rhel7/rhel:7.3-53
 ENV NODE_ENV=production
 WORKDIR /app
 USER 0
