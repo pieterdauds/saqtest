@@ -71,6 +71,7 @@ COPY ./s2i/bin/ $STI_SCRIPTS_PATH
 COPY ./root/ /
 COPY test.txt /
 RUN yum install -y telnet telnet-server
+RUN chmod 777 -r /usr/libexec/s2i
 # Drop the root user and make the content of /opt/app-root owned by user 1001
 RUN chown -R 1001:0 ${APP_ROOT} && chmod -R ug+rwx ${APP_ROOT} && \
     rpm-file-permissions
