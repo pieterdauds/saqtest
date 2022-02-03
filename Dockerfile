@@ -4,6 +4,7 @@ FROM rhscl/nodejs-12-rhel7
 # and set permissions so that the container runs without root access
 USER 0
 RUN mkdir /saqb
+COPY test.txt /saqb/test.txt
 USER 1001
 
 # Install the dependencies
